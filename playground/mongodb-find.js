@@ -27,11 +27,11 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, db) => {
     //     }
     // );
 
-    db.collection('user').find({name:'simoyassine'}).toArray().then((docs)=>
+    db.collection('todos').find({_id: new ObjectID('589ba28d849d3c25b21128cf')}).toArray().then((docs)=>
         {
             "use strict";
-            console.log('the users with the name simoyassine: ');
-            console.log(JSON.stringify(docs, undefined, 2));
+
+            console.log(docs);
         },
         (err) => {
         "use strict";
